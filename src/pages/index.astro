@@ -1,0 +1,154 @@
+---
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content={Astro.generator} />
+    <title>America, My Face Is Saying Everything That You Need To Know</title>
+    <meta name="description" content="Dot com." />
+    <meta
+      name="keywords"
+      content="RPDR, RuPaul's Drag Race, Kalorie Karbdashian-Williams, Monique Heart, Alyssa Edwards"
+    />
+    <meta name="author" content="Eva Decker" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:type" content="video" />
+    <meta
+      property="og:title"
+      content="America, My Face Is Saying Everything That You Need To Know"
+    />
+    <meta property="og:description" content="Dot Com." />
+    <meta
+      property="og:video"
+      content="http://americamyfaceissayingeverythingthatyouneedtoknow.com/dotcom.mp4"
+    />
+    <meta
+      property="og:image"
+      content="http://americamyfaceissayingeverythingthatyouneedtoknow.com/poster.png"
+    />
+    <meta
+      property="og:url"
+      content="http://americamyfaceissayingeverythingthatyouneedtoknow.com/"
+    />
+    <meta
+      property="og:site_name"
+      content="America, My Face Is Saying Everything That You Need To Know"
+    />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <main>
+      <div class="video">
+        <video playsinline controls loop poster="poster.png">
+          <source src="dotcom.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --shadow-color: 286deg 69% 26%;
+    --shadow-elevation-low: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.34),
+      0px 0.9px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+      0px 2.2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-medium: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.36),
+      0px 1.8px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+      0px 4.6px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+      0px 11.2px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+    --shadow-elevation-high: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.34),
+      0px 3.3px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+      0px 6.1px 6.9px -0.7px hsl(var(--shadow-color) / 0.34),
+      0px 10px 11.3px -1.1px hsl(var(--shadow-color) / 0.34),
+      -0.1px 16px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+      -0.1px 25.1px 28.2px -1.8px hsl(var(--shadow-color) / 0.34),
+      -0.1px 38.1px 42.9px -2.1px hsl(var(--shadow-color) / 0.34),
+      -0.2px 56.2px 63.2px -2.5px hsl(var(--shadow-color) / 0.34);
+  }
+
+  html,
+  body,
+  video {
+    padding: 0;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: linear-gradient(
+      0deg,
+      #e800e0,
+      #e000e5,
+      #d700ea,
+      #ce00ef,
+      #c300f4,
+      #b700fa,
+      #aa00ff
+    );
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  video {
+    background: black;
+    width: 80vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: var(--shadow-elevation-high);
+    aspect-ratio: 16 / 9;
+  }
+</style>
