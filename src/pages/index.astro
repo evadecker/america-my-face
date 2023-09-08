@@ -13,8 +13,10 @@
       content="RPDR, RuPaul's Drag Race, Kalorie Karbdashian-Williams, Monique Heart, Alyssa Edwards"
     />
     <meta name="author" content="Eva Decker" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta property="og:type" content="video" />
     <meta
       property="og:title"
@@ -83,13 +85,15 @@
   </head>
   <body>
     <main>
-      <video playsinline controls loop poster="poster.png">
-        <source src="dotcom.mp4" type="video/mp4" />
-      </video>
+      <div class="video-wrapper">
+        <video playsinline controls loop poster="poster.png">
+          <source src="dotcom.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <footer>
+        <a href="https://evadecker.com">Eva Decker</a> put this on the web :)
+      </footer>
     </main>
-    <footer>
-      <a href="https://evadecker.com">Eva Decker</a> put this on the web :)
-    </footer>
   </body>
 </html>
 
@@ -111,6 +115,37 @@
       11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
       17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
       25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
   }
 
   html,
@@ -143,11 +178,8 @@
   }
 
   body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+      env(safe-area-inset-bottom) env(safe-area-inset-left);
   }
 
   body,
@@ -167,10 +199,21 @@
   }
 
   main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .video-wrapper {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 900px;
   }
 
   video {
@@ -178,13 +221,24 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow-elevation-high);
-    position: relative;
-    width: 1200px;
-    max-width: 95vw;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @media (max-height: 600px) {
+    video {
+      width: auto;
+      max-height: 60vh;
+    }
+  }
+
+  video:hover {
+    cursor: pointer;
   }
 
   footer {
     text-shadow: var(--shadow-elevation-medium);
-    padding: 24px 0;
+    margin-top: 16px;
+    z-index: 1;
   }
 </style>
