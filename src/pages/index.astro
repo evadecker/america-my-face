@@ -79,15 +79,13 @@
     <link rel="manifest" href="/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#aa00ff" />
   </head>
   <body>
     <main>
-      <div class="video">
-        <video playsinline controls loop poster="poster.png">
-          <source src="dotcom.mp4" type="video/mp4" />
-        </video>
-      </div>
+      <video playsinline controls loop poster="poster.png">
+        <source src="dotcom.mp4" type="video/mp4" />
+      </video>
     </main>
   </body>
 </html>
@@ -95,13 +93,6 @@
 <style is:global>
   :root {
     --shadow-color: 286deg 69% 26%;
-    --shadow-elevation-low: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.34),
-      0px 0.9px 1px -1.2px hsl(var(--shadow-color) / 0.34),
-      0px 2.2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
-    --shadow-elevation-medium: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.36),
-      0px 1.8px 2px -0.8px hsl(var(--shadow-color) / 0.36),
-      0px 4.6px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
-      0px 11.2px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
     --shadow-elevation-high: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.34),
       0px 3.3px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
       0px 6.1px 6.9px -0.7px hsl(var(--shadow-color) / 0.34),
@@ -145,10 +136,11 @@
 
   video {
     background: black;
-    width: 80vw;
-    max-height: 90vh;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: var(--shadow-elevation-high);
-    aspect-ratio: 16 / 9;
+    position: relative;
+    width: 1200px;
+    max-width: 95vw;
   }
 </style>
