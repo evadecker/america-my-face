@@ -10,7 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.10"
+    "@astrojs/vercel": "^5.1.0",
+    "@vercel/analytics": "^1.1.1",
+    "astro": "^3.0.10",
+    "serverless": "link:@astrojs/vercel/serverless"
   },
   "devDependencies": {
     "prettier": "^3.0.3",

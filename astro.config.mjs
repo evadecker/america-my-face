@@ -1,6 +1,13 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
-  plugins: ['prettier-plugin-astro']
+  output: "static",
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
+  plugins: ["prettier-plugin-astro"],
 });
