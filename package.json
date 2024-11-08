@@ -10,13 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/vercel": "^5.1.0",
-    "@vercel/analytics": "^1.1.1",
-    "astro": "^3.0.10",
-    "serverless": "link:@astrojs/vercel/serverless"
+    "@astrojs/netlify": "^5.5.4",
+    "astro": "^4.16.10"
   },
   "devDependencies": {
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0"
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
